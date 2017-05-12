@@ -13,8 +13,11 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && \
     nvm install v6 && \
+    nvm alias default 6 && \
     npm install -g grunt && \
     npm install -g bower
+
+RUN ln -s /root/.nvm/versions/node/v6.10.3/bin/node /usr/bin/node
 
 # Add run.sh script, which will be executed at the launch.
 ADD /run.sh /run.sh

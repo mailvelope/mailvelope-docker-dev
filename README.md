@@ -80,7 +80,7 @@ Beware to replace {selenium_server_ip} with the ip of your host. (you can obtain
 6) Execute the tests
 
 `./node_modules/.bin/wdio ./config/firefox.conf.js`
-`./node_modules/.bin/wdio ./config/firefox.conf.js`
+`./node_modules/.bin/wdio ./config/chrome.conf.js`
 
 To see the tests actually being executed in the selenium browser, you can use vnc on your host 
 and connect to the grid ip:
